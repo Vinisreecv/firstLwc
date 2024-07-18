@@ -1,0 +1,38 @@
+<template>
+    <!-- <lightning-card icon-name="standard:account" variant="base" title="Product Search controller">
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                    <lightning-input type="text" 
+                                     value={strSearchProdName}
+                                     label="Enter Product Name" 
+                                     onchange={handleProductName} placeholder="Search Product">                                         
+                                    </lightning-input>
+            </div>
+        </div> 
+        <div if:true={datatable}>
+            <lightning-datatable
+              key-field="id"
+              data={datatable}
+              columns={columns}
+            ></lightning-datatable>
+        </div>
+     
+    </lightning-card> -->
+
+    <lightning-card title="Product data table ">
+        <!-- sldsValidatorIgnoreNextLine -->
+        <lightning-layout multiple-rows="false">
+        <lightning-layout-item size="3">
+        <lightning-input title="Search" label="Enter the Product name you want" onchange={hadleonchange} value={searchkey} size="1"></lightning-input>
+        </lightning-layout-item>
+        </lightning-layout>
+                <div>
+                    <template if:true={finaldatatable}>
+        <lightning-datatable
+            key-field="Id"
+            columns={columns} data={finaldatatable}>
+        </lightning-datatable>
+        </template>
+        </div>
+            </lightning-card>
+</template>

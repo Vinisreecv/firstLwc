@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="LDS using record form">
+        
+        <lightning-record-form object-api-name={objectApiName}
+            fields={fieldsList}
+            onsuccess={updateHandler}
+            record-id={recordId}
+            mode="Readonly"
+            >
+        </lightning-record-form>
+
+    </lightning-card>
+</template>

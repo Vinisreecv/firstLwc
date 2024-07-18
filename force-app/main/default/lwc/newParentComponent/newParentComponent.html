@@ -1,0 +1,12 @@
+<template>
+    
+    <lightning-card title="parent to child communication">
+<c-new-child-compnent message={greeting}></c-new-child-compnent>
+    </lightning-card>
+
+    <div>
+        <lightning-card title="parent" variant="base">
+          <c-new-child-compnent listof-name={names}></c-new-child-compnent>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card icon-name="standard:account" title="child component">
+      <div>
+         {message}
+      </div>
+      
+    </lightning-card>
+
+    <div>
+        <lightning-card  variant="Narrow"  title="Non primitive datatype in parent child" icon-name="standard:account">
+            <template if:true={listofName} for:each={listofName} for:item="name" for:index="index">
+               <li key={name}>
+                    {name}
+               </li>
+            </template>
+        </lightning-card>
+    </div>
+</template>

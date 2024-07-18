@@ -1,0 +1,21 @@
+<template>
+    <template if:true={showTable}> 
+        <lightning-card  variant="Narrow"  title="Child Contact" icon-name="standard:contact">
+            <div class="slds-p-horizontal_small">
+                <template if:true={contacts}>
+                    <lightning-datatable 
+                         data={contacts}
+                         columns={columns} 
+                         key-field="Id" 
+                         >
+                    </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+     
+            </div>
+         </lightning-card>
+        </template>
+    
+</template>
